@@ -6,7 +6,7 @@
     <title>Happy Mama Day 2026</title>
     <meta property="og:title" content="Happy Mama Day 2026/6/13">
     
-    <meta property="og:description" content="This is Birthday Website for mom producted by Sanon and Sora in 2026">
+    <meta property="og:description" content="A gift from Sanon and Sora in 2026">
     
     <meta property="og:image" content="ogp-image.jpg">
     
@@ -26,7 +26,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fcfce0; /* 淡いイエロー */
+            background-color: #fcf8d5; /* 淡いイエロー */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,11 +38,11 @@
         }
 
         .login-box {
-            background: white;
+            background: rgb(255, 255, 255);
             padding: 40px 20px;
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(46, 77, 148, 0.08);
-            border: 2px solid #df8ebc; /* ピンクのアクセント */
+            box-shadow: 0 10px 30px rgba(51, 79, 146, 0.08);
+            border: 2px solid #2e4d94; /* ピンクのアクセント */
             text-align: center;
             width: 100%;
             max-width: 340px;
@@ -60,7 +60,7 @@
             padding: 12px;
             font-size: 16px;
             color: #2e4d94;
-            border: 2px solid #ffe3e3;
+            border: 2px solid #d5d5d6;
             border-radius: 12px;
             margin-bottom: 15px;
             text-align: center;
@@ -99,21 +99,21 @@
 
         body {
             font-family: 'Zen Maru Gothic', sans-serif;
-            background-color: #fcfce0; /* 🖼️ 画像の淡いイエロー背景 */
+            background-color: #fcf8d5; /* 🖼️ 画像の淡いイエロー背景 */
             color: #2e4d94; /* 🖼️ 画像のオシャレなネイビー文字 */
             margin: 0;
             padding: 0;
-            line-height: 1.8;
+            line-height: 1.3;
             font-size: 15px;
         }
 
         /* 右上のメニューボタン */
         .menu-open-btn {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 55px;
-            height: 55px;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
             background-color: #2e4d94;
             color: white;
             border: none;
@@ -127,6 +127,15 @@
             justify-content: center;
             transition: transform 0.2s ease;
             -webkit-tap-highlight-color: transparent;
+            width: 32px;
+            height: 32px;
+            background-color: #1d3994;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
         }
         .menu-open-btn:active { transform: scale(0.9); }
 
@@ -187,19 +196,26 @@
         .menu-overlay.active { display: block; }
 
         /* ーーー 🖼️ トップ：メインビジュアルエリア ーーー */
-        .hero-section {
-            padding: 60px 20px 10px 20px;
+        .gifter-section {
             text-align: center;
             position: relative;
-            max-width: 500px;
+            max-width: 450px;
             margin: 0 auto;
+        }
+        
+        .hero-section {
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            position: relative;
+            max-width: 370px;
+            margin: -20px auto;
         }
 
         .hero-title {
             font-family: 'Kiwi Maru', serif;
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin: 0 0 25px 0;
+            font-size: 3.3rem;
+            line-height: 1.15;
+            margin: 0 0 20px 0;
             text-align: left;
             position: relative;
         }
@@ -207,28 +223,171 @@
             display: block;
             position: relative;
         }
-        .hero-title .indent-1 { margin-left: 35px; }
-        .hero-title .indent-2 { margin-left: 70px; }
+        .hero-title .indent-1 { margin-left: 180px; }
+        .hero-title .indent-2 { margin-left: 80px; }
         
         .hero-title .heart-mark {
             display: inline-block;
-            color: #df8ebc;
-            font-size: 2rem;
+            color: #d778ae;
+            font-size: 1rem;
             position: absolute;
             top: -10px;
-            right: 40px;
+            right: 125px;
         }
 
-        /* ーーー 🔷 横向き六角形フォトフレームエリア ーーー */
+        .hero-title .heart-mark2 {
+            display: inline-block;
+            color: #d778ae;
+            font-size: 1rem;
+            position: absolute;
+            top: -10px;
+            right: 45px;
+        }
+
+
+
+        /* 右側の縦書きメッセージ＆日付バッジ */
+        .vertical-decor-wrap {
+            position: absolute;
+            right: 50px;
+            top: 230px;
+            z-index: 3;
+            display: flex;
+            gap: 12px;
+        }
+
+        .v-badge {
+            transform: rotate(357deg);
+            line-height: 20px;
+            background-color: white;
+            padding: 5px 4px;
+            font-size: 1.0rem;
+            font-weight: bold;
+            border: 2px solid #2e4d94;
+            box-shadow: 4px 4px 0px rgba(223, 142, 188, 0.4);
+            letter-spacing: 2px;
+            height: fit-content;
+            position: relative;
+            top: -80px;
+            left: 80px;
+        }
+
+        .v-badge::before {
+            content: "";
+            position: absolute;
+            
+            /* 🔴 点の場所（左上のカドぴったりに重ねる設定） */
+            top: -6.4px;   /* 数字を小さくすると上、大きくすると下へ動きます */
+            left: 9px;  /* 数字を小さくすると左、大きくすると右へ動きます */
+            
+            /* 🎨 点の大きさ・色・形（きれいな正円） */
+            width: 10px;
+            height: 10px;
+            background-color: #dd7fb4; /* ママのサイトに似合う可愛いオレンジ色 */
+            border-radius: 50%;
+            
+            /* バッジの枠線より手前に表示させる */
+            z-index: 1;
+        }
+
+        .v-text {
+            transform: rotate(358deg);
+            writing-mode: vertical-rl;
+            font-family: 'Kiwi Maru', serif;
+            font-size: 1.0rem;
+            letter-spacing: 2px;
+            margin-top: 180px;
+            font-weight: bold;/* 子どもの顔写真と被らないように下にずらす */
+            position: relative;
+            left: 29px;
+        }
+
+        .v-text2 {
+            transform: rotate(8deg);
+            writing-mode: vertical-rl;
+            font-family: 'Kiwi Maru', serif;
+            font-size: 1.0rem;
+            letter-spacing: 4px;
+            margin-top: 160px;
+            font-weight: bold;
+            position: relative;
+            left: 28px;
+        }
+
+        /* ーーー 🛑 十角形メッセージ枠エリア（いただいた画像をあてはめ） ーーー */
+        .decagon-message-area {
+            position: relative;
+            max-width: 300px;
+            margin: 0px auto 0px auto; 
+            padding: 10px 20px;
+            box-sizing: border-box;
+            right: 60px;
+        }
+
+        /* 🖼️ 画像を使わず、CSSだけで作った綺麗な楕円形のメッセージボックス */
+        .decagon-box {
+            background-color: #fdfbf4; /* 楕円の内側の色（白） */
+            border: 2px solid #2e4d94; /* ママのネイビー色の綺麗な枠線 */
+            border-radius: 50%;        /* これを指定することで綺麗な楕円（正円〜長円）になります */
+            
+            /* 💡 綺麗な楕円の形を保ちつつ、文字を中央に収めるための余白設定 */
+            padding: 23px 17px; 
+            text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+            
+            /* 少し立体感を出すために、ノートと同じような優しい影をつけています */
+            box-shadow: 0 6px 15px rgba(46, 77, 148, 0.05); 
+        }
+
+        .decagon-box p {
+            margin: 0;
+            color: #2e4d94;
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 0.76rem;
+            line-height: 1.2;
+        }
+
+        /* 右下の子どもの丸顔写真 */
+        .child-face-portrait {
+            position: absolute;
+            right: -80px;
+            bottom: 5px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 4;
+        }
+
+        .child-face-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: drop-shadow(4px 0px 0px #ffffff) 
+            drop-shadow(-4px 0px 0px #ffffff) 
+            drop-shadow(0px 4px 0px #ffffff) 
+            drop-shadow(0px -4px 0px #ffffff);
+        }
+
+        /* 一番下の大きな「# 誕生日おめでとう」 */
+        .bottom-hashtag {
+            font-family: 'Kiwi Maru', serif;
+            font-size: 2.3rem;
+            text-align: center;
+            margin: 10px 0 30px 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+                /* ーーー 🔷 横向き六角形フォトフレームエリア ーーー */
         .hexagon-outer {
-            /* 💡 ここで縦横比を自由に調整できます（例：横280px、縦140pxでしっかり横長に） */
-            width: 280px; 
-            height: 140px; 
-            
-            /* 六角形の切り抜き（上が平ら、左右が尖る） */
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            
-            /* 枠線の色（背景色） */
+            width: 310px; 
+            height: 210px;
+            right: 0px;
+            top: -10px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
             background-color: rgb(0, 12, 120);
             margin: 0 auto;
             position: relative;
@@ -239,253 +398,460 @@
         }
 
         .hexagon-inner {
-            /* 💡 縦横を％で指定することで、outerの横長比率をそのまま引き継ぎます */
-            width: 96%; 
-            height: 94%; /* 縦横の線の太さを揃えるために微調整 */
-            
-            /* 同じく六角形に切り抜き */
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            
-            /* 🌸 背景をピンクの点々（ドット柄）に設定 */
-            background-color: white;
-            background-image: radial-gradient(#df8ebc 2.5px, transparent 2px);
-            background-size: 18px 18px;
-            overflow: hidden;
+            width: 99%; 
+            height: 98.6%; 
+            clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+            background-color: #fcf9e3;
+            background-image: 
+                radial-gradient(#df8ebc 2.5px, transparent 2px),
+                radial-gradient(#df8ebc 2.5px, transparent 2px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            overflow: hidden; /* 💡 これにより、枠からはみ出た2枚目以降の写真が綺麗に隠れます */
             position: relative;
         }
 
-        .hexagon-inner img {
-            /* 💡 横長フレームに合わせて、画像が潰れたり見切れたりしないよう調整 */
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 枠線内に綺麗に収める場合はcoverがおすすめです */
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 3;
+        .page-divider {
+            border: none; /* 元々あるグレーの線を消す */
+            
+            /* 💡 ここで点線を設定します */
+            /* 2px = 線の太さ / dotted = 丸い点線 / #2e4d94 = ママのネイビー色 */
+            border-top: 3px dotted #2e4d94; 
+            
+            /* 上下のコンテンツとの隙間（上が40px、下が40px空ける設定） */
+            margin: 40px auto; 
+            
+            /* 線の横幅（80%にすると、画面の両端から少し離れてオシャレになります） */
+            width: 80%;
+            
+            position: relative;
         }
 
-        /* 右側の縦書きメッセージ＆日付バッジ */
-        .vertical-decor-wrap {
-            position: absolute;
-            right: 20px;
-            top: 230px;
-            z-index: 3;
+        /* ーーー 🎞️ ここからスライド用の新規コード ーーー */
+
+        /* 📸 6枚の画像を横一列に並べて動かす「帯」 */
+        .slider-track {
             display: flex;
-            gap: 12px;
-        }
-
-        .v-badge {
-            line-height: 23px;
-            background-color: white;
-            padding: 7px 7px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border: 2px solid #2e4d94;
-            box-shadow: 4px 4px 0px rgba(223, 142, 188, 0.4);
-            letter-spacing: 2px;
-            height: fit-content;
-        }
-
-        .v-text {
-            writing-mode: vertical-rl;
-            font-family: 'Kiwi Maru', serif;
-            font-size: 1.4rem;
-            letter-spacing: 4px;
-            margin-top: 110px; /* 子どもの顔写真と被らないように下にずらす */
-        }
-
-        /* ーーー 🛑 十角形メッセージ枠エリア（いただいた画像をあてはめ） ーーー */
-        .decagon-message-area {
-            position: relative;
-            max-width: 450px;
-            margin: 15px auto 20px auto; 
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        /* 🖼️ 送ってもらった十角形（IMG_6464.png）を背景にしたメッセージボックス */
-        .decagon-box {
-            background-image: url('IMG_6464.png'); /* 枠線画像を背景に指定 */
-            background-size: 100% 100%; /* ボックスのサイズに画像を完璧にフィットさせる */
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 45px 45px; /* 内側の余白（文字が枠に被らないように調整） */
-            text-align: center;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        .decagon-box p {
-            margin: 0;
-            color: #2e4d94;
-            font-family: 'Zen Maru Gothic', sans-serif;
-            font-weight: bold;
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        /* 右下の子どもの丸顔写真 */
-        .child-face-portrait {
+            width: 600%;  /* 💡 画像6枚分（100% × 6）の横幅を確保します */
+            height: 100%;
             position: absolute;
-            right: 15px;
-            bottom: -35px;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            z-index: 4;
+            top: 0;
+            left: 0;
+            
+            /* 2秒キープ＋スライド時間を考慮し、全6枚で「総ループ時間 15秒」に設定 */
+            /* infinite で途切れず永遠に繰り返します */
+            animation: slideTable 20s infinite ease-in-out; 
         }
 
-        .child-face-portrait img {
-            width: 100%;
+        /* 📸 帯の中にある、写真1枚1枚の設定（元の img から書き換え） */
+        .slider-track img {
+            width: calc(100% / 6); /* 💡 6枚が均等にフレームと同じ幅（100%）になります */
             height: 100%;
             object-fit: cover;
+            flex-shrink: 0; /* 画像が横に潰れるのを防ぐ */
         }
 
-        /* 左側の「ここに何か文字入れてもいいかも！」のテキスト */
-        .side-note-text {
-            position: absolute;
-            left: -15px;
-            bottom: 30px;
-            font-size: 0.8rem;
-            max-width: 100px;
-            line-height: 1.4;
-            transform: rotate(-5deg); 
-            opacity: 0.8;
-        }
-
-        /* 一番下の大きな「# 誕生日おめでとう」 */
-        .bottom-hashtag {
-            font-family: 'Kiwi Maru', serif;
-            font-size: 2.3rem;
-            text-align: center;
-            margin: 60px 0 30px 0;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        /* ーーー 🐾 流れる猫のステージ（ループ仕様） ーーー */
-        .nyan-stage-container {
-            width: 100%;
-            background-color: #fffbe3;
-            padding: 20px 0;
-            overflow: hidden;
-            border-top: 2px dashed #ffb7b2;
-            border-bottom: 2px dashed #ffb7b2;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 40px 0;
-        }
-
-        .nyan-loop-wrap { display: flex; width: 100%; overflow: hidden; }
-        .nyan-track { display: flex; width: max-content; }
-        .track-left { animation: scroll-to-left 25s linear infinite; }
-
-        .nyan-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            padding: 8px 20px;
-            margin: 0 12px;
-            border-radius: 50px;
-            box-shadow: 0 3px 8px rgba(46, 77, 148, 0.05);
-            font-size: 1.5rem;
-            min-width: 80px;
-            border: 1px solid #ffe3e3;
-        }
-        .nyan-card span {
-            font-size: 0.65rem;
-            color: #df8ebc;
-            font-weight: bold;
-            margin-top: 1px;
-        }
-
-        @keyframes scroll-to-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        /* ⚙️ 2秒ごとにパッと横に滑るアニメーションの計算 */
+        /* 全体を15秒（100%）としたとき、1枚あたり約16.6%ずつの持ち時間になります */
+        @keyframes slideTable {
+            0%, 13% { transform: translateX(0); }                  /* 1枚目表示（2秒弱） */
+            16.6%, 29.6% { transform: translateX(-16.66%); }       /* 2枚目へスライドしてキープ */
+            33.3%, 46.3% { transform: translateX(-33.33%); }       /* 3枚目へスライドしてキープ */
+            50%, 63% { transform: translateX(-50%); }              /* 4枚目へスライドしてキープ */
+            66.6%, 79.6% { transform: translateX(-66.66%); }       /* 5枚目へスライドしてキープ */
+            83.3%, 96.3% { transform: translateX(-83.33%); }       /* 6枚目へスライドしてキープ */
+            100% { transform: translateX(0); }                    /* 最後の写真から1枚目へ戻る */
         }
 
         /* ーーー 下部コンテンツエリア ーーー */
-        .container {
-            max-width: 600px;
+
+                /* ーーー 全体のコンテナ設定 ーーー */
+        .episode-container {
+            max-width: 450px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 30px 20px 20px 20px;
+            background-color: #ffffff;
+            font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
             box-sizing: border-box;
         }
 
-        section {
-            background: white;
-            padding: 30px 24px;
-            margin-bottom: 25px;
-            border-radius: 24px;
-            box-shadow: 0 6px 20px rgba(46, 77, 148, 0.03);
-            text-align: center;
-            border: 1px solid rgba(223, 142, 188, 0.1);
-            scroll-margin-top: 30px; 
-        }
-
-        h2 {
-            color: #2e4d94;
-            border-bottom: 2px solid #ffb7b2;
-            padding-bottom: 8px;
-            margin-top: 0;
-            font-size: 1.4rem;
-            font-family: 'Kiwi Maru', serif;
-        }
-
-        .photo-gallery {
+        /* ーーー 👑 ヘッダー部分 ーーー */
+        .episode-header {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            color: #1d3994; /* 綺麗なネイビー */
         }
 
-        .photo-img {
-            width: 100%;
-            max-width: 280px;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 6px solid white;
-            box-shadow: 0 6px 15px rgba(46, 77, 148, 0.08);
+        .episode-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
 
-        .letter-btn {
-            background-color: #2e4d94;
-            color: white;
-            border: none;
-            padding: 14px 35px;
-            font-size: 1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            width: 85%;
-            max-width: 260px;
-            box-shadow: 0 4px 12px rgba(46, 77, 148, 0.15);
-            margin: 12px auto;
-            display: block;
-            font-family: 'Zen Maru Gothic', sans-serif;
+        .episode-title-target {
+            font-size: 1.0rem;
+            font-weight: bold;
+            margin: 0;
+            padding-bottom: 5px;
+            margin-bottom: -10px;
+        }
+
+        .episode-number {
+            display: flex;
+            align-items: flex-end;
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .ep-text {
+            font-size: 1.1rem;
+            margin-right: 5px;
             font-weight: bold;
         }
 
-        .letter-content {
-            display: none;
-            margin-top: 15px;
+        .ep-num {
+            font-size: 4rem;
+            font-weight: 600;
+            font-family: Arial, sans-serif; /* 数字をパキッと太く */
+            /* 💡 文字を横にギュッと縮めて細長く見せる魔法のコード */
+            display: inline-block; /* transformを効かせるために必要です */
+            transform: scaleX(0.7); /* 1マスの幅を0.7倍（70%）に縮めます */
+            transform-origin: right bottom; /* 💡 重要：縮める基準点を右下に固定（配置がズレにくくなります） */
+            margin-left: -15px;
+            margin-bottom: -40px;
+        }
+
+        /* ーーー 📸 メイン写真エリア ーーー */
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* 写真と写真の間のすき間 */
+            margin-bottom: 30px;
+        }
+
+        .main-photo {
+            width: 100%;
+            aspect-ratio: 4 / 3; /* 写真を綺麗な横長比率に固定 */
+            /* 💡 【形を合わせる設定1】フチが角張らないよう、ほんのり丸みをつけます */
+            border-radius: 4px; 
+            
+            /* 💡 【形を合わせる設定2】写真の周りに『白いフチ（余白）』を作ります */
+            background-color: #ffffff; /* フチの色（白） */
+            padding: 6px; /* フチの太さ（上下左右に6pxの白い余白ができます） */
+            box-sizing: border-box; /* paddingを含めた全体のサイズを綺麗に計算 */
+
+            /* 💡 【形を合わせる設定3】白いフチが背景（ノート）に馴染むよう、
+            実際の画像と同じように、下側にうっすらと柔らかい影を落とします */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    
+            overflow: hidden;
+        }
+
+        .main-photo-height {
+            width: 100%;
+            aspect-ratio: 3 / 4; /* 写真を綺麗な横長比率に固定 */
+            /* 💡 【形を合わせる設定1】フチが角張らないよう、ほんのり丸みをつけます */
+            border-radius: 4px; 
+            
+            /* 💡 【形を合わせる設定2】写真の周りに『白いフチ（余白）』を作ります */
+            background-color: #ffffff; /* フチの色（白） */
+            padding: 6px; /* フチの太さ（上下左右に6pxの白い余白ができます） */
+            box-sizing: border-box; /* paddingを含めた全体のサイズを綺麗に計算 */
+
+            /* 💡 【形を合わせる設定3】白いフチが背景（ノート）に馴染むよう、
+            実際の画像と同じように、下側にうっすらと柔らかい影を落とします */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    
+            overflow: hidden;
+        }
+
+        .main-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 枠線に合わせて画像を綺麗に収める */
+            border-radius: 2px;
+        }
+
+        .main-photo-height img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 枠線に合わせて画像を綺麗に収める */
+            border-radius: 2px;
+        }
+
+        /* ーーー 💬 コメントエリア（写真＆吹き出し横並び） ーーー */
+        .comment-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-left: 10px;
+        }
+
+        /* 切り抜き写真 */
+        .cutout-thumb {
+            width: 80px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
+        .cutout-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* 写真のフチにうっすら柔らかい影をつけて馴染ませます */
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
+        }
+
+        /* 🟡 左しっぽの黄色い吹き出し */
+        .comment-balloon {
+            position: relative;
+            background-color: #ffe066; /* 明るく可愛い黄色 */
+            padding: 12px 20px;
+            border-radius: 20px; /* ぷっくり丸みのある角 */
+            flex: 1;
+        }
+
+        .comment-balloon p {
+            margin: 0;
+            color: #1d3994;
+            font-size: 0.95rem;
+            font-weight: bold;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* 吹き出しの「左しっぽ」をCSSで作成 */
+        .comment-balloon::after {
+            content: '';
+            position: absolute;
+            left: -10px; /* 吹き出しの左側に飛び出させる */
+            top: 50%;
+            transform: translateY(-50%);
+            
+            /* 三角形を作る設定 */
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 12px solid #ffe066; /* 吹き出しと同じ黄色 */
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+        }
+
+        /* ーーー 📄 ノートが2枚重なるエリア ーーー */
+        /* 全体を中央に保つための外枠 */
+        .note-wrapper {
+            width: 100%;
+            max-width: 350px; /* 写真のようなスマートな縦長感を維持 */
+            position: relative;
+            /* 1枚目が左上に飛び出す分のスペースを確保 */
+            margin-top: 30px; 
+            margin-left: 40px;
+            
+            /* 💡 ここを修正：左側の余白を自動（auto）にし、右側を0にすることで右に寄せます */
+            margin-right: -5px;
+            margin-left: auto;
+        }
+
+        /* 【🔷 1枚目のノート（背景側：左上にずれる）】 */
+        .note-container-under {
+            position: absolute;
+            /* 💡 2枚目（メイン）からどれくらい左上に飛び出させるか */
+            top: 15px;
+            left: -15px;
+            /* 💡 2枚目のサイズに自動で追従させる設定 */
+            right: 15px;
+            bottom: -15px;
+            
+            background-color: #ffffff;
+            border: 2px solid #1d3994; /* 青い枠線 */
+            border-radius: 0px;
+            z-index: 1;
+        }
+
+        /* 【🔷 2枚目のノート（手前側：メインコンテンツ）】 */
+        .note-container-main {
+            position: relative;
+            z-index: 2;
+            background-color: #ffffff;
+            border: 2px solid #1d3994; /* 青い枠線 */
+            border-radius: 0px;
+            width: 100%;
+            display: flex;
+            box-shadow: 4px 4px 15px rgba(0, 12, 120, 0.08); /* 重なりを引き立てる影 */
+        }
+
+        /* ーーー 📄 ノートの中身（デザイン再現） ーーー */
+
+        /* メインの筆記エリア */
+        .main-content {
+            flex: 1;
+            padding: 25px 15px;
+        }
+
+        /* ヘッダー */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .questionnaire-tag {
+            position: relative;
+            padding: 4px 16px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            color: #1d3994;
+            
+            /* 下だけはそのまま全面に点線を引く */
+            border-bottom: 2px dotted #1d3994;
+        }
+
+        /* 💡 変更点：questionnaireの枠（上部なし、左下と右下を丸く） */
+        .questionnaire-tag {
+            border-top: none; /* 上の線はなし */
+            border-left: 2px dotted #1d3994;
+            border-right: 2px dotted #1d3994;
+            border-bottom: 2px dotted #1d3994;
+            
+            /* 💡 左下（bottom-left）と右下（bottom-right）だけを丸く（12px）設定 */
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            
+            padding: 4px 16px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            color: #1d3994;
+        }
+
+        .menu-open-btn span {
+            display: block;
+            width: 15px;
+            height: 2.2px;
+            background-color: #ffffff;
+        }
+
+        /* タイトル */
+        .title-area {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1d3994;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .main-title {
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .main-title .bold {
+            font-weight: 900;
+        }
+
+        /* 白抜き（袋文字） */
+        .main-title .outline {
+            font-weight: bold;
+            color: #ffffff;
+            -webkit-text-stroke: 1.5px #1d3994;
+        }
+
+        /* 質問枠（線なし・真っ白な無地カード） */
+        .question-section {
+            margin-bottom: 40px;
+            background: none !important;
+            padding: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .question-box {
+            position: relative;
             margin-bottom: 25px;
-            padding: 20px;
-            background-color: #fffdf4; 
-            border-left: 4px solid #df8ebc;
-            text-align: left;
-            border-radius: 8px;
-            font-size: 1rem;
-            animation: fadeIn 0.4s ease;
+            padding: 20px 10px;
+            background-color: #ffffff; /* 完全に真っ白な背景に固定 */
+            background-image: url('tag.jpg'); 
+            background-repeat: no-repeat;
+            background-size: 100% 100%; /* スマホの横幅と縦幅に画像をぴったり合わせる設定 */
+            background-position: center;
+            border: none !important; /* 余計な枠線を一切なしに */
+            box-shadow: none !important;
+        }
+
+        .question-box h2 {
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+            color: #1d3994;
+            border-bottom: none !important;
+            padding-bottom: 23px !important;
+            margin: 0;
+        }
+
+        /* ーーー 🟨 回答ブロック ーーー */
+        .answer-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .answer-box {
+            width: 82%;
+            height: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 7.5px;
+        }
+
+        .answer-box::after {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 60%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 7px;
+            background-color: inherit;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        .answer-text {
+            font-size: 0.63rem;
+            font-weight: bold;
+            position: relative;
+            left: -10px;
+        }
+
+        .align-right { align-self: flex-end; }
+        .color-dark-yellow { background-color: #ffde6a; }
+        .color-medium-yellow { background-color: #ffe682; }
+        .color-light-yellow { background-color: #fff6c0; }
+
+        .name {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1d3994;
+            white-space: nowrap;
         }
 
         @keyframes fadeIn {
@@ -501,30 +867,6 @@
             font-size: 0.85rem;
         }
 
-        /* 💻 パソコン・タブレット等の大きな画面での微調整 */
-        @media (min-width: 600px) {
-            .hero-section { max-width: 650px; padding-top: 80px; }
-            .hero-title { font-size: 4.5rem; }
-            
-            .hexagon-outer { width: 380px; height: 290px; }
-            .hexagon-inner { width: 97%; height: 97%; }
-            
-            .vertical-decor-wrap { right: 40px; top: 240px; gap: 18px; }
-            .v-text { font-size: 1.3rem; }
-            
-            .decagon-message-area { max-width: 520px; margin-top: 25px; }
-            .decagon-box { padding: 50px 60px; }
-            .decagon-box p { font-size: 1.2rem; }
-            .child-face-portrait { width: 130px; height: 130px; right: 20px; bottom: -40px; }
-            .side-note-text { left: -30px; font-size: 0.9rem; max-width: 120px; }
-
-            .bottom-hashtag { font-size: 3rem; margin: 85px 0 40px 0; }
-            .container { max-width: 700px; }
-            section { padding: 40px; margin-bottom: 40px; }
-            .photo-gallery { flex-direction: row; justify-content: center; gap: 25px; }
-            .photo-img { width: 200px; }
-            .letter-btn { display: inline-block; margin: 10px; width: auto; }
-        }
     </style>
 </head>
 <body>
@@ -540,8 +882,8 @@
 
     <div id="main-content">
         
-        <button class="menu-open-btn" onclick="toggleMenu()">🎵</button>
-
+        <button class="menu-open-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+                            
         <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
 
         <nav class="side-menu" id="side-menu">
@@ -553,100 +895,1123 @@
             </ul>
         </nav>
 
+        <div class="gifter-section">
+            <p>
+                A gift from Sanon & Sora
+            </p>
+        </div>
         <div class="hero-section">
             <h1 class="hero-title">
                 <span>Happy</span>
-                <span class="indent-1">Mama<span class="heart-mark">❤</span></span>
+                <span class="indent-1">Mama<span class="heart-mark">&hearts;&#xFE0E;</span><span class="heart-mark2">&hearts;&#xFE0E;</span></span>
                 <span class="indent-2">Day</span>
             </h1>
             
             <div class="hexagon-outer">
                 <div class="hexagon-inner">
-                    <img src="mama-photo.jpg" alt="お母さんの写真">
+                    <div class="slider-track">
+                        <img src="4_0.png" alt="写真1">
+                        <img src="7_0.png" alt="写真2">
+                        <img src="5_0.png" alt="写真3">
+                        <img src="6_0.png" alt="写真4">
+                        <img src="8_0.png" alt="写真5">
+                        <img src="9_0.png" alt="写真6">
+                    </div>
                 </div>
             </div>
             
             <div class="vertical-decor-wrap">
                 <div class="v-badge">6<br>月<br>13<br>日<br>!</div>
-                <div class="v-text">ママの日だね！</div>
+                <div class="v-text">だね！</div>
+                <div class="v-text2">ママの日</div>
             </div>
         </div>
 
         <div class="decagon-message-area">
-            
-            <div class="side-note-text">ここに何か文字入れてもいいかも！</div>
 
             <div class="decagon-box">
-                <p>ママの子供に生まれてきて、<br>本当に幸せです。</p>
-                <p>いつも応援してくれてありがとう！</p>
-                <p>ママ、大大大好き！</p>
+                <p>いつでもスマホで見返せる<br>「ママ専用の思い出アルバム」です！</p>
+                <p>思い出の写真、家族みんなからの<br>メッセージ、そしてママへの感謝を<br>たっぷり詰め込みました。</p>
             </div>
 
             <div class="child-face-portrait">
-                <img src="child-face.jpg" alt="子どもの顔写真">
+                <img src="mamanohi.png" alt="子どもの顔写真">
             </div>
         </div>
 
         <div class="bottom-hashtag"># 誕生日おめでとう</div>
 
-        <div class="nyan-stage-container">
-            <div class="nyan-loop-wrap">
-                <div class="nyan-track track-left">
-                    <div class="nyan-card">🐱<span>🐾</span></div>
-                    <div class="nyan-card">😻<span>LOVE</span></div>
-                    <div class="nyan-card">🐈<span>🎵</span></div>
-                    <div class="nyan-card">😸<span>MOM</span></div>
-                    <div class="nyan-card">🐾<span>🎉</span></div>
-                    <div class="nyan-card">🦁<span>👑</span></div>
-                    <div class="nyan-card">😺<span>✨</span></div>
-                    <div class="nyan-card">🐱<span>🐾</span></div>
-                    <div class="nyan-card">😻<span>LOVE</span></div>
-                    <div class="nyan-card">🐈<span>🎵</span></div>
-                    <div class="nyan-card">😸<span>MOM</span></div>
-                    <div class="nyan-card">🐾<span>🎉</span></div>
-                    <div class="nyan-card">🦁<span>👑</span></div>
-                    <div class="nyan-card">😺<span>✨</span></div>
+        <div class="episode-container">
+            <hr class="page-divider">
+            <header class="episode-header">
+                <h2 class="episode-title">ボール遊びとカエルさん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">01</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="F2963FC8-3414-4826-B303-EDE5E2E58F95.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021173775_0.jpg" alt="下の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021173776_0.jpg" alt="下の写真">
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            
-            <section id="message-section">
-                <h2>いつもありがとう</h2>
-                <p>今日はお母さんの特別な日。日頃の感謝の気持ちを込めて、この特設サイトをプレゼントします！</p>
-                <p>いつも家族のために笑顔でいてくれて本当にありがとう。体に気をつけて、これからも素敵な毎日を過ごしてね。</p>
-            </section>
-
-            <section id="album-section">
-                <h2>思い出のアルバム</h2>
-                <p>お気に入りの写真をここに飾ろう！</p>
-                <div class="photo-gallery">
-                    <img src="photo1.jpg" alt="思い出1" class="photo-img">
-                    <img src="photo2.jpg" alt="思い出2" class="photo-img">
-                    <img src="photo3.jpg" alt="思い出3" class="photo-img">
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">じぃじとばぁばとママとさのん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">02</span>
                 </div>
-            </section>
+            </header>
 
-            <section id="letter-section">
-                <h2>家族からのお手紙</h2>
-                <p>ボタンを押すと、それぞれの手紙が開きます。</p>
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021173817.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">さのんお得意のピース</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">03</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021198345_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021198346_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021198347_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ソフトクリーム大好きさのん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">04</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021263876_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021263877_0.jpg" alt="下の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">あーちゃんと仲良くブランコさのん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">05</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021263879.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">スティッチと4shot</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">06</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__1021263883.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">パパの背中とさのん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">07</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021263881.jpg" alt="上の写真">
+                </div>
+            </div>
+            <header class="episode-header">
+                <h2 class="episode-title">さのん＆そらの仲良しshot</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">08</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__1021173763_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__1021173764_0.jpg" alt="下の写真">
+                </div>
+            </div>
+            <div class="comment-area">
+                <div class="cutout-thumb">
+                    <img src="4_0.png" alt="そらちゃんお顔">
+                </div>
                 
-                <button class="letter-btn" onclick="toggleLetter('letter1')">子どもたちから ✉</button>
-                <div id="letter1" class="letter-content">
-                    <p>お母さんへ</p>
-                    <p>いつも応援してくれてありがとう！お母さんの美味しいご飯が大好きです。これからも体に気をつけて、元気でいてね。</p>
-                    <p style="text-align: right; font-weight: bold; margin-top: 20px;">子どもたちより</p>
+                <div class="comment-balloon">
+                    <p>そらのお顔が<br>まん丸でかわいい〜</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">家族ディズニー</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">09</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987852_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987853_0.jpg" alt="下の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987854_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987855_0.jpg" alt="下の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987857_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title-target">首かしげそらちゃん<br>さのんにくっつくそらちゃん<br>さのんのことをガン見するそらちゃん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">10</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987858_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987859_0.jpg" alt="下の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987860_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title-target">ぬいぐるみを抱っこするそら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">11</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987861_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">戦隊ポーズ</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">12</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987862_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__77987863_0.jpg" alt="下の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__77987864_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">さのんの耳を持ってるそらちゃん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">13</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987865_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">さのん小学校入学</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">14</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987866_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">3人でお散歩</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">15</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987868_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ピカチューコラボの観覧車</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">16</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987869_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987870_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">プール帰りのそら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">17</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987871_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">お揃いのTシャツで登校</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">18</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987872_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ママ渾身のキャラ弁</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">19</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987873_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そら＆かいちゃんshot</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">20</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987874_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__77987875_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ヘアアレンジそらさのん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">21</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987876_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">メリーゴーランドとご機嫌斜め<br>そらちゃんと森の中</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">22</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987877_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987879_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987880_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">おにぎりもぐもぐ</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">23</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987881_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">かいちゃん生まれたて</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">24</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987882_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__77987883_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ピクニック中のじぃじとそらちゃん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">25</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__77987884_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ママと頑張った<br>統計グラフコンクール</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">26</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987885_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そろばんの授賞式と<br>その帰りに撮ったプリクラ</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">27</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__77987886_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__77987887_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__77987888_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">あわしまマリンパーク</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">28</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028803_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <div class="comment-area">
+                <div class="cutout-thumb">
+                    <img src="5_0.png" alt="そらちゃんお顔">
+                </div>
+                
+                <div class="comment-balloon">
+                    <p>そらの目が<br>キュルキュルでお気に入りの写真</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">さのんの中学入学式</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">29</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028804_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ママとの２ショット</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">30</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028805_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028806_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">みんなでプリクラ</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">31</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028807_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">運動公園のハンモック</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">32</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028808_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">さのんの髪の毛が<br>気になるかいちゃん</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">33</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028809_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028810_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そらの顔に注目（笑）</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">34</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028811_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <div class="comment-area">
+                <div class="cutout-thumb">
+                    <img src="6_0.png" alt="そらちゃんお顔">
+                </div>
+                
+                <div class="comment-balloon">
+                    <p>かいちゃんを見てるそらのなんとも言えない表情が面白くてこのアルバムの中で1番笑える写真！(笑)</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">油壷マリンパーク</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">35</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028812_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">日本エレキテル連合メイク</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">36</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028814_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028815_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">バンタンのLIVE遠征</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">37</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028816_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028817_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そら中学卒業</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">38</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028821_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028822_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">２０２１年の年賀状shot</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">39</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028818_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">２０２２年の年賀状shot</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">40</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028819_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028820_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そら誕生日</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">41</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028823_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">かっこいい自転車に乗るそら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">42</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028825_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">小さい頃のママに<br>似てるさのんとそら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">43</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028826_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028827_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028828_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">振袖とみんな</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">44</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028829_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028830_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028831_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028832_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028833_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">成人式の日のさのんとそら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">45</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028834_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028836_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">そらちゃんカット中</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">46</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028837_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028838_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">こむちゃんとみんな</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">47</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028839_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028840_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">じぃじと神経衰弱</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">48</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028841_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">ニコニコばぁばとじぃじ</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">49</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028842_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">じぃじ・かいちゃん・さのん・そら</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">50</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo">
+                    <img src="S__78028843_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028844_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">みんなで花火</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">51</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028845_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028847_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">みかん狩り</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">52</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028848_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028849_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">お花見</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">53</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028850_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028851_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <header class="episode-header">
+                <h2 class="episode-title">みんなで旅行</h2>
+                <div class="episode-number">
+                    <span class="ep-text">episode</span>
+                    <span class="ep-num">54</span>
+                </div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="main-photo-height">
+                    <img src="S__78028852_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028853_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028854_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo">
+                    <img src="S__78028855_0.jpg" alt="上の写真">
+                </div>
+                <div class="main-photo-height">
+                    <img src="S__78028856_0.jpg" alt="上の写真">
+                </div>
+            </div>
+            <br>
+            <br>
+            
+        </div>
+
+    <hr class="page-divider">
+
+    <div class="note-wrapper">
+        
+        <div class="note-container-under"></div>
+        
+        <div class="note-container-main">
+            
+            
+
+            <main class="main-content">
+                
+                <header class="header">
+                    <div class="questionnaire-tag">questionnaire</div>
+                </header>
+
+                <div class="title-area">
+                    <p class="subtitle">家族のみんなが回答した</p>
+                    <h1 class="main-title">
+                        <span class="bold">ママ</span>
+                        <span class="outline">アンケート！</span>
+                    </h1>
                 </div>
 
-                <button class="letter-btn" onclick="toggleLetter('letter2')">お父さんから ✉</button>
-                <div id="letter2" class="letter-content">
-                    <p>妻へ</p>
-                    <p>いつも家族を温かく支えてくれて感謝しています。誕生日おめでとう。これからは2人の時間も大切にして、また旅行にでも行きましょう。</p>
-                    <p style="text-align: right; font-weight: bold; margin-top: 20px;">夫より</p>
-                </div>
-            </section>
+                <section class="question-section">
+                    <div class="question-box">
+                        <h2>Q1.ママの好きなところは？</h2>
+                    </div>
+                    
+                    <div class="answer-group">
+                        <div class="answer-box color-dark-yellow">
+                            <p class="answer-text">長い時間をかけてさのんのお悩み相談に<br>乗ってくれるところ！家族思いなところ！</p>
+                            <span class="name">さのん</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text">かわいい、 思いやり、 子供たちのことに全力</p>
+                            <span class="name">パパ</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text"><span style="font-size: 12px;">どんなときも笑顔でいるところ</span><pre>     </pre></p>
+                            <span class="name">そら</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="question-section">
+                    <div class="question-box">
+                        <h2>Q2.ママの尊敬するところは？</h2>
+                    </div>
+                    
+                    <div class="answer-group">
+                        <div class="answer-box color-dark-yellow">
+                            <p class="answer-text"><span style="font-size: 13px;">知識力が豊富</span><pre>            </pre></p>
+                            <span class="name">かいと</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text"><span style="font-size: 13px;">人思いで頑張り屋さん</span><pre>   </pre></p>
+                            <span class="name">ゆたちゃん</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text">周りがやろうとしないことや大変な<br>ことを率先してやり続けているところ<pre>   </pre></p>
+                            <span class="name">そら</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <pre>     </pre><p class="answer-text">人の気持ちを考えて実際に行動に移せるところ。本当の意味での思いやりってこういうことなんだろうなといつも思わされる！</p>
+                            <span class="name">さのん</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text">マルチタスクで手際、仕事が速い。行動力。<br>おしゃれや若者の興味を知ってたり時代の<br>変化に敏感</p>
+                            <span class="name">パパ</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text"><span style="font-size: 13px;">何事にも全力</span><pre>         </pre></p>
+                            <span class="name">あーちゃん</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="question-section">
+                    <div class="question-box">
+                        <h2>Q3.ママを一言で表すと?</h2>
+                    </div>
+                    
+                    <div class="answer-group">
+                        <div class="answer-box color-medium-yellow">
+                            <p class="answer-text"><span style="font-size: 13px;">チキン好き</span><pre>           </pre></p>
+                            <span class="name">あーちゃん</span>
+                        </div>
+                        <div class="answer-box color-dark-yellow align-right">
+                            <pre>   </pre><p class="answer-text">太陽母。太陽みたいに明るく活発なママだから</p>
+                            <span class="name">そら</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text"><span style="font-size: 13px;">さのんとそらのママ</span><pre>          </pre></p>
+                            <span class="name">パパ</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text"><span style="font-size: 13px;">笑ってるイメージ</span><pre>            </pre></p>
+                            <span class="name">かいと</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text"><span style="font-size: 12px;">家族大好き美人ねぇちゃん</span><pre>   </pre></p>
+                            <span class="name">ゆたちゃん</span>
+                        </div>
+                        <div class="answer-box color-dark-yellow align-right">
+                            <pre>         </pre><p class="answer-text">スーパーポジティブ人間！疲れていてもいつも最後はポジティブに変換しているから！<pre>    </pre></p>
+                            <span class="name">さのん</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="question-section">
+                    <div class="question-box">
+                        <h2>Q4.「ママあるある」を挙げるなら？</h2>
+                    </div>
+                    
+                    <div class="answer-group">
+                        <div class="answer-box color-dark-yellow">
+                            <p class="answer-text">風邪をひかない。話しかけられたり<br>相談されたり頼られやすい</p><pre>    </pre>
+                            <span class="name">パパ</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text"><span style="font-size: 13px;">進路相談員 悩み相談所</span></p><pre>    </pre>
+                            <span class="name">ゆたちゃん</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <pre>     </pre><p class="answer-text"><span style="font-size: 11px;">次やることを独り言として喋っている</span><pre>    </pre></p>
+                            <span class="name">そら</span>
+                        </div>
+                        <div class="answer-box color-medium-yellow align-right">
+                            <p class="answer-text"><span style="font-size: 11.5px;">感想(特に衝撃的だったこと)<br>を何度も言う！</span></p><pre>    </pre>
+                            <span class="name">さのん</span>
+                        </div>
+                        <div class="answer-box color-light-yellow">
+                            <p class="answer-text"><span style="font-size: 13px;">無理しすぎると肩凝る</span></p><pre>      </pre>
+                            <span class="name">あーちゃん</span>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
         </div>
+    </div>
 
         <footer>
             <p>© 2026 Special Birthday Website for Mom</p>
