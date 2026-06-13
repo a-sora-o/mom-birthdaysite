@@ -732,8 +732,8 @@
         }
 
         .cutout-thumb2 {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             flex-shrink: 0;
         }
 
@@ -751,7 +751,7 @@
             object-fit: contain;
             /* 写真のフチにうっすら柔らかい影をつけて馴染ませます */
             filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
-            transform: translate(95px, 35px);
+            transform: translate(100px, 35px);
         }
 
         /* 🟡 左しっぽの黄色い吹き出し */
@@ -766,7 +766,7 @@
         .comment-balloon p {
             margin: 0;
             color: #1d3994;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: bold;
             line-height: 1.5;
             text-align: center;
@@ -795,7 +795,7 @@
             /* 💡 枠の大きさを小さくする設定 */
             width: fit-content;        /* 💡 文字の長さに合わせて自動で一番小さい幅になります */
             min-width: 60px;          /* 小さすぎても不自然なので、最低限の幅を設定 */
-            max-width: 150px;          /* 逆に文字が長すぎるときはここで自動改行させます */
+            max-width: 170px;          /* 逆に文字が長すぎるときはここで自動改行させます */
             margin: 28px auto 0;            /* 写真の下で真ん中に配置するための設定 */ /* 上の隙間を28pxに固定（写真との距離感を見て調整してね） */
             z-index: 1;
         }
@@ -815,15 +815,15 @@
             position: absolute;
             
             /* 💡 【調整】しっぽの長さに合わせて、飛び出させる位置を深く（-34px）します */
-            top: -30px;                
-            left: 70%;                 /* 左右の真ん中 */
+            top: -15px;                
+            left: 90%;                 /* 左右の真ん中 */
             
             /* 💡 【調整】横幅（太さ）を少しスリム（左右6pxずつ）にして、よりシャープに長く見えるようにしました */
-            border-left: 7px solid transparent;   
-            border-right: 7px solid transparent;
+            border-left: 6px solid transparent;   
+            border-right: 6px solid transparent;
             
             /* 💡 【調整】しっぽの長さを 35px に大幅アップ！ */
-            border-bottom: 35px solid #ffe066;    
+            border-bottom: 25px solid #ffe066;    
 
             /* 💡 【調整】長くなった分、斜めの曲がり具合が綺麗に見えるよう「-18度」に微調整 */
             transform: translateX(-50%) rotate(52deg); 
@@ -845,7 +845,7 @@
             flex-direction: column; /* 💡 中身（写真と吹き出し）を縦に並べる */
             align-items: center;    /* 💡 写真も吹き出しも、きれいに真ん中揃えにする */
             width: fit-content;     /* グループ全体の幅を中身に合わせる */
-            margin: 0 auto 0 190px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
+            margin: 0 auto 0 130px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
             max-width: 100%; 
             box-sizing: border-box;
             padding: 0 20px;
