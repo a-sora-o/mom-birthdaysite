@@ -107,38 +107,70 @@
             font-size: 15px;
         }
 
-        /* 右上のメニューボタン */
+        /* 📱 右上のメニューオープンボタン（三本線） */
         .menu-open-btn {
             position: fixed;
             top: 10px;
             right: 10px;
-            width: 40px;
-            height: 40px;
-            background-color: #2e4d94;
-            color: white;
+            width: 36px;  /* 💡 押しやすいように少しだけサイズアップ */
+            height: 36px;
+            background-color: #1d3994; /* ママのネイビー色 */
             border: none;
             border-radius: 50%;
-            font-size: 1.3rem;
-            cursor: pointer;
             z-index: 100;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
+            cursor: pointer;
             -webkit-tap-highlight-color: transparent;
-            width: 32px;
-            height: 32px;
-            background-color: #1d3994;
-            border-radius: 50%;
+            transition: transform 0.2s ease;
+
+            /* 💡 中の三本線を綺麗に中央に並べる設定 */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 4px;
+            gap: 5px; /* 線と線の隙間 */
         }
         .menu-open-btn:active { transform: scale(0.9); }
 
+        /* 💡 三本線（ハンバーガー）の「線」自体のデザイン */
+        .menu-open-btn span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: white; /* 白い線 */
+            border-radius: 2px;
+        }
+
+        /* ❌ メニュー内のクロップ（閉じる）ボタン */
+        .menu-close-btn {
+            position: absolute; /* 💡 fixedからside-menu基準のabsoluteに変更すると位置がズレません */
+            top: 15px;
+            right: 15px;
+            width: 36px;
+            height: 36px;
+            background-color: #1d3994;
+            border: none;
+            border-radius: 50%;
+            z-index: 210;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            
+            /* 💡 バツ印を中央に寄せる設定 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 💡 閉じるボタンの「×」をCSSの文字で表現 */
+        .menu-close-btn::before {
+            content: "×";
+            color: white;
+            font-size: 1.5rem;
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        /* ーーー 📋 サイドメニュー本体（調整なし・そのまま） ーーー */
         .side-menu {
             position: fixed;
             top: 0;
@@ -148,24 +180,14 @@
             background-color: rgba(252, 252, 224, 0.98);
             box-shadow: -5px 0 20px rgba(46, 77, 148, 0.1);
             z-index: 200;
-            padding: 40px 20px;
+            padding: 60px 20px 40px 20px; /* 閉じるボタンと被らないよう上部を少し広げました */
             box-sizing: border-box;
-            transition: right 0.3s ease;
+            transition: right 0.4s ease;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
         .side-menu.active { right: 0; }
-
-        .menu-close-btn {
-            background: none;
-            border: none;
-            color: #df8ebc;
-            font-size: 1.3rem;
-            cursor: pointer;
-            text-align: right;
-            font-weight: bold;
-        }
 
         .menu-links {
             list-style: none;
@@ -254,22 +276,38 @@
             z-index: 3;
             display: flex;
             gap: 12px;
+            
         }
 
         .v-badge {
-            transform: rotate(357deg);
-            line-height: 20px;
+    
             background-color: white;
-            padding: 5px 4px;
+            padding: 5px 5px; /* 💡 縦書きに合わせて上下の余白（12px）を少し広げると綺麗になります */
             font-size: 1.0rem;
-            font-weight: bold;
-            border: 2px solid #2e4d94;
+            font-weight: 700;
+            border: 1.5px solid #2e4d94;
             box-shadow: 4px 4px 0px rgba(223, 142, 188, 0.4);
-            letter-spacing: 2px;
+            
             height: fit-content;
             position: relative;
-            top: -80px;
+            top: -92px;
             left: 80px;
+            line-height: 18px;
+
+            /* ーーー 🔤 文字を綺麗に真ん中に収める設定 ーーー*/
+            text-orientation: upright; /* 💡 アルファベットや数字も傾けずにまっすぐ立たせる */
+            text-align: center;        /* 💡 縦方向の真ん中に寄せる */
+            letter-spacing: 0px;       /* 💡 文字の間隔を少し広げて読みやすく */
+            margin-bottom: -4px;       /* 💡 超重要：letter-spacingのせいで下にできる謎の余白を相殺してピタッと中央にします */
+            
+            /* 💡 中の文字を横方向にも完全にセンター合わせする設定 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 💡 揺れの軸（起点）を上側にするために追加 */
+            transform-origin: center top;
+            /* 💡 ゆらゆら揺れるアニメーションを設定（4秒かけて無限にループ） */
+            animation: yuraYura 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
         }
 
         .v-badge::before {
@@ -277,17 +315,30 @@
             position: absolute;
             
             /* 🔴 点の場所（左上のカドぴったりに重ねる設定） */
-            top: -6.4px;   /* 数字を小さくすると上、大きくすると下へ動きます */
-            left: 9px;  /* 数字を小さくすると左、大きくすると右へ動きます */
+            top: -4.0px;   /* 数字を小さくすると上、大きくすると下へ動きます */
+            left: 10.5px;  /* 数字を小さくすると左、大きくすると右へ動きます */
             
             /* 🎨 点の大きさ・色・形（きれいな正円） */
-            width: 10px;
-            height: 10px;
+            width: 6.5px;
+            height: 6.5px;
             background-color: #dd7fb4; /* ママのサイトに似合う可愛いオレンジ色 */
             border-radius: 50%;
             
             /* バッジの枠線より手前に表示させる */
             z-index: 1;
+        }
+
+        /* ーーー 🎢 ゆらゆら揺れるアニメーションの設定 ーーー */
+        @keyframes yuraYura {
+            0%, 15% {
+                transform: rotate(7deg); /* 💡 右端で一瞬フワッと止まる（ここまで15%使う） */
+            }
+            50%, 65% {
+                transform: rotate(-7deg); /* 💡 右端からパパッと左端に駆け抜け、ここでフワッと止まる */
+            }
+            100% {
+                transform: rotate(7deg); /* 💡 左端からまたパパッと右端に戻る */
+            }
         }
 
         .v-text {
@@ -385,7 +436,7 @@
         .hexagon-outer {
             width: 310px; 
             height: 210px;
-            right: 0px;
+            right: 18px;
             top: -10px;
             clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
             background-color: rgb(0, 12, 120);
@@ -398,8 +449,8 @@
         }
 
         .hexagon-inner {
-            width: 99%; 
-            height: 98.6%; 
+            width: 98.5%; 
+            height: 98.4%; 
             clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
             background-color: #fcf9e3;
             background-image: 
@@ -432,35 +483,56 @@
         /* 📸 6枚の画像を横一列に並べて動かす「帯」 */
         .slider-track {
             display: flex;
-            width: 600%;  /* 💡 画像6枚分（100% × 6）の横幅を確保します */
+            width: 700%;  /* 💡 画像6枚分（100% × 6）の横幅を確保します */
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
+            scroll-behavior: auto !important; 
             
             /* 2秒キープ＋スライド時間を考慮し、全6枚で「総ループ時間 15秒」に設定 */
             /* infinite で途切れず永遠に繰り返します */
-            animation: slideTable 20s infinite ease-in-out; 
+            animation: slideTable 24s infinite ease-in-out;
+            
         }
 
         /* 📸 帯の中にある、写真1枚1枚の設定（元の img から書き換え） */
         .slider-track img {
-            width: calc(100% / 6); /* 💡 6枚が均等にフレームと同じ幅（100%）になります */
+            width: calc(100% / 7); /* 💡 6枚が均等にフレームと同じ幅（100%）になります */
             height: 100%;
             object-fit: cover;
             flex-shrink: 0; /* 画像が横に潰れるのを防ぐ */
         }
 
-        /* ⚙️ 2秒ごとにパッと横に滑るアニメーションの計算 */
-        /* 全体を15秒（100%）としたとき、1枚あたり約16.6%ずつの持ち時間になります */
         @keyframes slideTable {
-            0%, 13% { transform: translateX(0); }                  /* 1枚目表示（2秒弱） */
-            16.6%, 29.6% { transform: translateX(-16.66%); }       /* 2枚目へスライドしてキープ */
-            33.3%, 46.3% { transform: translateX(-33.33%); }       /* 3枚目へスライドしてキープ */
-            50%, 63% { transform: translateX(-50%); }              /* 4枚目へスライドしてキープ */
-            66.6%, 79.6% { transform: translateX(-66.66%); }       /* 5枚目へスライドしてキープ */
-            83.3%, 96.3% { transform: translateX(-83.33%); }       /* 6枚目へスライドしてキープ */
-            100% { transform: translateX(0); }                    /* 最後の写真から1枚目へ戻る */
+            /* ーー 1枚目表示 ーー */
+            0%, 3.55% { transform: translateX(0); }
+
+            /* ーー 2枚目へスライド ーー */
+            8.28%, 20.56% { transform: translateX(-14.28%); }
+
+            /* ーー 3枚目へスライド ーー */
+            24.7%, 36.56% { transform: translateX(-28.57%); }
+
+            /* ーー 4枚目へスライド ーー */
+            41.85%, 53.56% { transform: translateX(-42.85%); }
+
+            /* ーー 5枚目へスライド ーー */
+            58%, 70% { transform: translateX(-57.14%); }
+
+            /* ーー 6枚目へスライド ーー */
+            74.52%, 86.56% { transform: translateX(-71.42%); }
+
+            /* ーー 7枚目（1枚目と同じ画像）へスライド ーー */
+            /* 💡 ここで一度、1枚目と同じ画像をしっかり停止させて見せます */
+            91.71%, 99.999% { transform: translateX(-85.71%); }
+
+            /* ーー 🌟 【超重要】1枚目へ滑らかに戻る繋ぎ目 ーー */
+            /* 96.5% で停止が終わったあと、100%（最初）に向けて、他の写真と「全く同じスピード・同じ時間」を使って、
+            左側（-100%＝完全に画面の外）へ向かってスライドさせます。
+            スライドしきった瞬間に、アニメーションが 0%（0の位置）にリセットされるため、
+            目で見ている画面上では、ワープしたことが一切分からない完全な無限ループになります。 */
+            100% { transform: translateX(0%); }
         }
 
         /* ーーー 下部コンテンツエリア ーーー */
@@ -887,15 +959,15 @@
         <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
 
         <nav class="side-menu" id="side-menu">
-            <button class="menu-close-btn" onclick="toggleMenu()">✕ 閉じる</button>
+            <button class="menu-close-btn" onclick="toggleMenu()"></button>
             <ul class="menu-links">
-                <li><a href="#message-section" onclick="toggleMenu()">💝 メッセージ</a></li>
-                <li><a href="#album-section" onclick="toggleMenu()">📷 アルバム</a></li>
-                <li><a href="#letter-section" onclick="toggleMenu()">✉ お手紙</a></li>
+                <li><a href="#message-section" onclick="toggleMenu()">💝 トップ</a></li>
+                <li><a href="#album-section" onclick="toggleMenu()">📷 思い出アルバム</a></li>
+                <li><a href="#letter-section" onclick="toggleMenu()">✉ ママアンケート</a></li>
             </ul>
         </nav>
 
-        <div class="gifter-section">
+        <div class="gifter-section" id="message-section">
             <p>
                 A gift from Sanon & Sora
             </p>
@@ -916,12 +988,13 @@
                         <img src="6_0.png" alt="写真4">
                         <img src="8_0.png" alt="写真5">
                         <img src="9_0.png" alt="写真6">
+                        <img src="4_0.png" alt="写真1">
                     </div>
                 </div>
             </div>
             
             <div class="vertical-decor-wrap">
-                <div class="v-badge">6<br>月<br>13<br>日<br>!</div>
+                <div class="v-badge">6<br>月<br>13<br>日<br>!!</div>
                 <div class="v-text">だね！</div>
                 <div class="v-text2">ママの日</div>
             </div>
@@ -941,7 +1014,7 @@
 
         <div class="bottom-hashtag"># 誕生日おめでとう</div>
 
-        <div class="episode-container">
+        <div class="episode-container" id="album-section">
             <hr class="page-divider">
             <header class="episode-header">
                 <h2 class="episode-title">ボール遊びとカエルさん</h2>
@@ -1874,7 +1947,7 @@
 
     <hr class="page-divider">
 
-    <div class="note-wrapper">
+    <div class="note-wrapper" id="letter-section">
         
         <div class="note-container-under"></div>
         
