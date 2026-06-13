@@ -217,6 +217,19 @@
         }
         .menu-overlay.active { display: block; }
 
+        .menu-title {
+            margin: 0;                    /* 元々ある余計な隙間をリセット */
+            padding-bottom: 5px;          /* 下のリンクとの間に少し隙間を作る */
+            color: #1d3994;               /* ママのネイビー色 */
+            font-size: 1.4rem;            /* リンクの文字（1.2rem）より少し大きめで見やすく */
+            font-weight: bold;
+            font-family: 'Kiwi Maru', serif; /* サイトの可愛いフォントに合わせる */
+            letter-spacing: 2px;          /* 文字の間隔を少し広げておしゃれに */
+            
+            /* バツボタンと被らないように、少しだけ左に寄せる、または下に下げる調整用 */
+            /* 💡 メニュータイトルの下に綺麗な線を入れる場合（不要なら消してOKです） */
+        }
+
         /* ーーー 🖼️ トップ：メインビジュアルエリア ーーー */
         .gifter-section {
             text-align: center;
@@ -960,6 +973,7 @@
 
         <nav class="side-menu" id="side-menu">
             <button class="menu-close-btn" onclick="toggleMenu()"></button>
+            <h3 class="menu-title">Happy Mama Day</h3>
             <ul class="menu-links">
                 <li><a href="#message-section" onclick="toggleMenu()">💝 トップ</a></li>
                 <li><a href="#album-section" onclick="toggleMenu()">📷 思い出アルバム</a></li>
