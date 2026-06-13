@@ -846,7 +846,10 @@
             flex-direction: column; /* 💡 中身（写真と吹き出し）を縦に並べる */
             align-items: center;    /* 💡 写真も吹き出しも、きれいに真ん中揃えにする */
             width: 190px;     /* グループ全体の幅を中身に合わせる */
-            margin: 0px 200px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
+            margin: 0px 190px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
+            max-width: 100%; 
+            box-sizing: border-box;
+            padding: 0 20px;
         }
 
         /* 📸 グループの中の写真のサイズ調整 */
@@ -857,7 +860,6 @@
             border-radius: 50%;     /* 💡 写真を丸く切り抜く場合（四角がよければこの行を消してOK） */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 写真にほんのり影をつける */
             z-index: 2;             /* 💡 吹き出しの長いしっぽより「上」に写真が来るようにする */
-            transform: translate(200px, -5px);
         }
 
         * {
