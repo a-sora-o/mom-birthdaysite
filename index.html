@@ -751,7 +751,7 @@
             object-fit: contain;
             /* 写真のフチにうっすら柔らかい影をつけて馴染ませます */
             filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
-            transform: translate(100px, 35px);
+            transform: translate(130px, 35px);
         }
 
         /* 🟡 左しっぽの黄色い吹き出し */
@@ -798,6 +798,7 @@
             max-width: 170px;          /* 逆に文字が長すぎるときはここで自動改行させます */
             margin: 28px auto 0;            /* 写真の下で真ん中に配置するための設定 */ /* 上の隙間を28pxに固定（写真との距離感を見て調整してね） */
             z-index: 1;
+            display: block;
         }
 
         .comment-balloon2 p {
@@ -849,6 +850,7 @@
             max-width: 100%; 
             box-sizing: border-box;
             padding: 0 20px;
+            display: block;
         }
 
         /* 📸 グループの中の写真のサイズ調整 */
