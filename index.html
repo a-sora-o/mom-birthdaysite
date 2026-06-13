@@ -194,15 +194,33 @@
             padding: 0;
             margin: 20px 0 0 0;
         }
-        .menu-links li { margin-bottom: 25px; }
+        /* 💡 メニューのリスト（li）の余白を少し調整 */
+        .menu-links li { 
+            margin-bottom: 18px; /* ボタン同士の間隔 */
+        }
+
+        /* 💡 リンク（a）を「文字」から「ぷっくりしたボタン」に変身させる */
         .menu-links a {
             display: block;
-            color: #2e4d94;
+            color: #ffffff;             /* 💡 文字色を白にして見やすく */
+            background-color: #2e4d94;  /* 💡 ボタンの背景をネイビーに */
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 10px;
-            border-bottom: 2px dashed #ffb7b2;
+            font-size: 1.1rem;
+            padding: 12px 25px;         /* 上下左右に内側の余白を作って押しやすく */
+            border-radius: 25px;        /* 💡 カプセル型のような可愛い角丸に */
+            border-bottom: none;        /* 古い点線は消去 */
             font-family: 'Kiwi Maru', serif;
+            text-align: center;         /* 文字を真ん中に */
+            
+            /* 💡 ほんのり影をつけて立体感を出す */
+            box-shadow: 0 4px 8px rgba(46, 77, 148, 0.15);
+            transition: all 0.2s ease;
+        }
+
+        /* 👆 ボタンを押したとき（タップしたとき）に少し引っ込むアニメーション */
+        .menu-links a:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(46, 77, 148, 0.15);
         }
 
         .menu-overlay {
