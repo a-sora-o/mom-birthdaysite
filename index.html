@@ -796,8 +796,7 @@
             width: fit-content;        /* 💡 文字の長さに合わせて自動で一番小さい幅になります */
             min-width: 60px;          /* 小さすぎても不自然なので、最低限の幅を設定 */
             max-width: 150px;          /* 逆に文字が長すぎるときはここで自動改行させます */
-            margin: 40px auto 0;            /* 写真の下で真ん中に配置するための設定 */
-            margin: 28px 0 0 0 !important; /* 上の隙間を28pxに固定（写真との距離感を見て調整してね） */
+            margin: 28px auto 0;            /* 写真の下で真ん中に配置するための設定 */ /* 上の隙間を28pxに固定（写真との距離感を見て調整してね） */
             z-index: 1;
         }
 
@@ -845,8 +844,8 @@
             display: flex;
             flex-direction: column; /* 💡 中身（写真と吹き出し）を縦に並べる */
             align-items: center;    /* 💡 写真も吹き出しも、きれいに真ん中揃えにする */
-            width: 190px;     /* グループ全体の幅を中身に合わせる */
-            margin: 0px 190px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
+            width: fit-content;     /* グループ全体の幅を中身に合わせる */
+            margin: 0 auto 0 190px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
             max-width: 100%; 
             box-sizing: border-box;
             padding: 0 20px;
