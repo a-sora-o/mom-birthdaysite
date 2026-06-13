@@ -504,7 +504,7 @@
             margin: 40px auto; 
             
             /* 線の横幅（80%にすると、画面の両端から少し離れてオシャレになります） */
-            width: 80%;
+            width: 85%;
             
             position: relative;
         }
@@ -585,6 +585,36 @@
             align-items: flex-end;
             margin-bottom: 20px;
             color: #1d3994; /* 綺麗なネイビー */
+        }
+
+        .title-episode {
+            position: relative;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            /* 💡 inline-block ではなく、必ず『block』にしてください */
+            display: block; 
+            
+            color: #2e4d94;
+            text-decoration: none;
+            font-size: 2.4rem;
+            padding: 10px;
+            font-family: 'Kiwi Maru', serif;
+            
+            /* 💡 これでボタン全体の真ん中に文字が寄ります */
+            text-align: center; 
+
+            /* ーーー ✍️ 下線の設定 ーーー */
+            /* border ではなく、テキスト装飾の下線機能を使います */
+            text-decoration: underline; 
+            
+            /* 💡 【修正】線の種類を「実線（一本線）」に指定（ここで点線を解除！） */
+            text-decoration-style: solid; 
+            
+            /* 💡 線の色を自由に変えたい場合はここ（文字と同じでよければ消してOK） */
+            text-decoration-color: #2e4d94; 
+            
+            /* 💡 【修正】これを入れると、文字と下線のすき間を少し空けて見やすくできます */
+            text-underline-offset: 8px;
         }
 
         .episode-title {
@@ -701,12 +731,27 @@
             flex-shrink: 0;
         }
 
+        .cutout-thumb2 {
+            width: 90px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
         .cutout-thumb img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             /* 写真のフチにうっすら柔らかい影をつけて馴染ませます */
             filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
+        }
+
+        .cutout-thumb2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* 写真のフチにうっすら柔らかい影をつけて馴染ませます */
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
+            transform: translate(95px, 35px);
         }
 
         /* 🟡 左しっぽの黄色い吹き出し */
@@ -739,6 +784,80 @@
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
             border-right: 12px solid #ffe066; /* 吹き出しと同じ黄色 */
+        }
+
+        .comment-balloon2 {
+            position: relative;
+            background-color: #ffe066; /* 明るく可愛い黄色 */
+            padding: 8px 14px;         /* 💡 上下左右の余白を狭くしてサイズダウン */
+            border-radius: 15px;       /* 小さめサイズに合わせて丸みも少し調整 */
+            
+            /* 💡 枠の大きさを小さくする設定 */
+            width: fit-content;        /* 💡 文字の長さに合わせて自動で一番小さい幅になります */
+            min-width: 60px;          /* 小さすぎても不自然なので、最低限の幅を設定 */
+            max-width: 150px;          /* 逆に文字が長すぎるときはここで自動改行させます */
+            margin: 40px auto 0;            /* 写真の下で真ん中に配置するための設定 */
+            margin: 28px 0 0 0 !important; /* 上の隙間を28pxに固定（写真との距離感を見て調整してね） */
+            z-index: 1;
+        }
+
+        .comment-balloon2 p {
+            margin: 0;
+            color: #1d3994;
+            font-size: 0.8rem;        /* 💡 文字のサイズも一回り小さく */
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        /* 📐 吹き出しの下側に飛び出る「三角（しっぽ）」の設定 */
+        .comment-balloon2::after {
+            content: '';
+            position: absolute;
+            
+            /* 💡 【調整】しっぽの長さに合わせて、飛び出させる位置を深く（-34px）します */
+            top: -30px;                
+            left: 70%;                 /* 左右の真ん中 */
+            
+            /* 💡 【調整】横幅（太さ）を少しスリム（左右6pxずつ）にして、よりシャープに長く見えるようにしました */
+            border-left: 7px solid transparent;   
+            border-right: 7px solid transparent;
+            
+            /* 💡 【調整】しっぽの長さを 35px に大幅アップ！ */
+            border-bottom: 35px solid #ffe066;    
+
+            /* 💡 【調整】長くなった分、斜めの曲がり具合が綺麗に見えるよう「-18度」に微調整 */
+            transform: translateX(-50%) rotate(52deg); 
+            
+            /* 💡 しっぽの根元をきれいに馴染ませる設定 */
+            transform-origin: bottom center;
+        }
+
+        .title-group {
+            display: flex;
+            flex-direction: column; /* 💡 中身（写真と吹き出し）を縦に並べる */
+            align-items: center;    /* 💡 写真も吹き出しも、きれいに真ん中揃えにする */
+            width: fit-content;     /* グループ全体の幅を中身に合わせる */
+            margin: -160px auto;
+        }
+
+        .photo-comment-group {
+            display: flex;
+            flex-direction: column; /* 💡 中身（写真と吹き出し）を縦に並べる */
+            align-items: center;    /* 💡 写真も吹き出しも、きれいに真ん中揃えにする */
+            width: 190px;     /* グループ全体の幅を中身に合わせる */
+            margin: 0px 200px;         /* 画面の真ん中に置きたい場合はこれを入れておく */
+        }
+
+        /* 📸 グループの中の写真のサイズ調整 */
+        .group-photo {
+            width: 100px;           /* 💡 写真の横幅（お好みのサイズに調整してください） */
+            height: 100px;          /* 💡 写真の縦幅 */
+            object-fit: cover;      /* 画像が縦横に潰れないようにする */
+            border-radius: 50%;     /* 💡 写真を丸く切り抜く場合（四角がよければこの行を消してOK） */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 写真にほんのり影をつける */
+            z-index: 2;             /* 💡 吹き出しの長いしっぽより「上」に写真が来るようにする */
+            transform: translate(200px, -5px);
         }
 
         * {
@@ -1047,6 +1166,21 @@
         <div class="bottom-hashtag"># 誕生日おめでとう</div>
 
         <div class="episode-container" id="album-section">
+            <hr class="page-divider">
+            <h2 class="title-episode">思い出アルバム</h2>
+            <div class="title-group">
+                <div class="photo-comment-group">
+                    <div class="cutout-thumb2">
+                        <img src="8_0.png" alt="そらちゃんお顔">
+                    </div>
+                    
+                    <div class="comment-balloon2">
+                        <p>思い出がいっぱい<br>詰まってるね!!</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br><br><br><br><br>
             <hr class="page-divider">
             <header class="episode-header">
                 <h2 class="episode-title">ボール遊びとカエルさん</h2>
